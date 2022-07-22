@@ -326,6 +326,7 @@ console.log(myArr[3],
 
 
 /*  Manipulate Array Function Methods
+
   1. .push() function method
 
 An easy way to append data to the end 
@@ -348,7 +349,9 @@ arr2.push(["happy", "joy"]);
 // output arr2 has the value ["Stimpson", "J", "cat", ["happy", "joy"]].
 console.log(arr2); // cross check
 
-// Example 2, Push ["dog", 3] onto the end of the myArray variable.
+
+
+// Example 3, .Push() adds ["dog", 3] onto the end of the myPushArray variable.
             //another format of writing with const
 
 const myPushArray = [["John", 23], ["cat", 2]];
@@ -356,19 +359,104 @@ const pushArray = myPushArray.push(["dog", 3]); //cross check
 console.log(myPushArray);
 
 
-/* Array pop()function
-        .pop() 
+/* 2. Array .pop()function method
 
+        use .pop() to remove 6 from the end of the array, remaining 1,4
+        Example 1.
         */
         const threeArr = [1, 4, 6];
         const oneDown = threeArr.pop(6);
-        console.log(oneDown);
+        console.log(oneDown); // removes the last 6
         console.log(threeArr);
 
 
-//The first console.log will display the value 6, 
+//The first console.log will display the value 6,  as .pop() method
 //and the second will display the value [1, 4]
 
 
 
+/* Example 2. 
+Use the .pop() function to remove the last item from myPopArray and assign the popped 
+off value to a new variable, removedFromMyArray
+*/
 
+const myPopArray = [["John", 23], ["cat", 2]];
+const removedFromArray = myPopArray.pop(["cat", 2]);
+console.log(removedFromArray); //removes the last as .pop() method
+console.log(myPopArray); 
+
+
+
+/* 3 Manipulate Arrays With shift()
+pop() always removes the last element of an array. What if you want to remove the first?
+
+That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last.
+
+Example:1 */
+
+const shiftArray = ["Stimpson", "J", ["cat"]];
+const removedFromShiftArray = shiftArray.shift();
+
+//removedFromShiftArray would have a value of the string Stimpson,
+// and shiftArray would have ["J", ["cat"]].
+console.log(removedFromShiftArray);
+console.log(shiftArray);
+
+//Example 2;
+const myShiftArray = [["John", 23], ["dog", 3]];
+
+// Only change code below this line
+const removedFromMyArray = myShiftArray.shift();
+console.log(removedFromMyArray);
+console.log(myShiftArray);
+
+// first removes John, 23 and second have value of dog, 3.
+
+
+
+
+/* 4 unShift()function method
+
+Not only can you shift elements off of the beginning of an array,
+ you can also unshift elements to the beginning of an array 
+ i.e. add elements in front of the array.
+
+.unshift() works exactly like .push(), but instead of adding 
+the element at the end of the array, unshift() adds the element at the beginning of the array.
+
+Example: 1 */
+
+const unShiftArray = ["Stimpson", "J", "cat"];
+const removeshiftArray = unShiftArray.shift();
+unShiftArray.unshift("Happy");
+//After the shift, removeShiftArray would have the value ["J", "cat"]. 
+//After the unshift, unShiftArray would have the 
+//value ["Happy", "J", "cat"].
+
+console.log(removeshiftArray);
+console.log(unShiftArray);
+
+
+//Example 2. Add ["Paul", 35] to the beginning of the myunShiftArray
+// variable using unshift().
+
+const myunShiftArray = [["John", 23], ["dog", 3]];
+const shiftRemove = myunShiftArray.shift();// removes John, 23
+
+
+// Only change code below this line
+myunShiftArray.unshift(["Paul", 35]); // adds Paul, 35
+
+console.log(shiftRemove);
+console.log(myunShiftArray);
+
+
+/* Shopping List
+Create a shopping list in the variable myList. 
+The list should be a multi-dimensional array 
+containing several sub-arrays. */
+
+const myList = [["bread", "mango", 4], ["Milk", 2], ["orange", 3],
+ ["egg", "ice-cream", 3], ["oil", 1]];
+
+ console.log(myList);
